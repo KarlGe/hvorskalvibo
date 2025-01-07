@@ -8,245 +8,251 @@
   </head>
 
   <body>
-    <section id="intro">
-      <div class="wrapper">
-        <h1>Hjemme best</h1>
-        <p>
-          Svar på dette raske skjemaet for å finne ut akkurat hvor du kan bo
-        </p>
-        <button onclick="goTo(1)">Åpne skjema</button>
-      </div>
-    </section>
-    <section id="form">
-      <div class="wrapper">
-        <form>
-          <fieldset class="input-wrapper horizontal">
-            <legend>Hvor mye plass ønsker du?</legend>
-            <label for="radio1">
-              <span>Nok til å ha besøk</span>
-              <input
-                id="radio1"
-                type="radio"
-                name="group-space"
-                value="small"
-              />
-            </label>
-            <label for="radio2">
-              <span>Nok til å ha barn</span>
-              <input
-                id="radio2"
-                type="radio"
-                name="group-space"
-                value="medium"
-              />
-            </label>
-            <label for="radio3">
-              <span>Nok til å ha pusterom</span>
-              <input
-                id="radio3"
-                type="radio"
-                name="group-space"
-                value="large"
-              />
-            </label>
-          </fieldset>
-          <fieldset class="input-wrapper grid-2">
-            <legend>Hvilke luksuser trenger du?</legend>
-            <label for="checkbox1">
-              <span>Muggfritt</span>
-              <input
-                id="checkbox1"
-                type="checkbox"
-                name="group1"
-                value="value1"
-              />
-            </label>
-            <label for="checkbox2">
-              <span>Vinkjøler</span>
-              <input
-                id="checkbox2"
-                type="checkbox"
-                name="group2"
-                value="value2"
-              />
-            </label>
-            <label for="checkbox3">
-              <span>Inngangsparti</span>
-              <input
-                id="checkbox3"
-                type="checkbox"
-                name="group3"
-                value="value3"
-              />
-            </label>
-            <label for="checkbox4">
-              <span>Uteområde</span>
-              <input
-                id="checkbox4"
-                type="checkbox"
-                name="group4"
-                value="value4"
-              />
-            </label>
-            <label for="checkbox5">
-              <span>Oppvaskmaskin</span>
-              <input
-                id="checkbox5"
-                type="checkbox"
-                name="group5"
-                value="value5"
-              />
-            </label>
-            <label for="checkbox6">
-              <span>God isolasjon</span>
-              <input
-                id="checkbox6"
-                type="checkbox"
-                name="group6"
-                value="value6"
-              />
-            </label>
-            <label for="checkbox7">
-              <span>Høyt under taket</span>
-              <input
-                id="checkbox7"
-                type="checkbox"
-                name="group7"
-                value="value7"
-              />
-            </label>
-          </fieldset>
-          <div class="input-wrapper range">
-            <label for="range1">
-              Hvor mye kommer foreldrene dine til å spytte inn?
-            </label>
-            <input min="0" max="20000000" type="range" id="range1" />
-          </div>
-          <div class="input-wrapper range">
-            <label for="range1"> Hvor mange kan du dele utgiftene med? </label>
-            <input type="range" id="range1" />
-          </div>
-          <div class="input-wrapper range">
-            <label for="range1">
-              Vi kan godt eie en del av hjemmet ditt. Hvor mye trenger du
-              egentlig å eie?
-            </label>
-            <input type="range" id="range1" data-suffix="%" />
-          </div>
-          <div class="input-wrapper">
-            <fieldset class="input-wrapper grid-3">
-              <legend>
-                De tenåringene, de har det fint med å bo på samme rom, ikke
-                sant?
-              </legend>
-              <label for="teenagers1">
-                <span>Jada</span>
-                <input
-                  id="teenagers1"
-                  type="radio"
-                  name="teenagers"
-                  value="value1"
-                />
-              </label>
-              <label for="teenagers2">
-                <span>Hvis de må</span>
-                <input
-                  id="teenagers2"
-                  type="radio"
-                  name="teenagers"
-                  value="value2"
-                />
-              </label>
-              <label for="teenagers3">
-                <span>Absolutt ikke</span>
-                <input
-                  id="teenagers3"
-                  type="radio"
-                  name="teenagers"
-                  value="value3"
-                />
-              </label>
-            </fieldset>
-          </div>
-          <div class="input-wrapper">
-            <fieldset class="input-wrapper grid-3">
-              <legend>
-                Trenger du egentlig den stua? Et kjøkken er vel bra nok?
-              </legend>
-              <label for="kitchenmerged1">
-                <span>Jada</span>
-                <input
-                  id="kitchenmerged1"
-                  type="radio"
-                  name="kitchenmerged"
-                  value="value1"
-                />
-              </label>
-              <label for="kitchenmerged2">
-                <span>Ok...</span>
-                <input
-                  id="kitchenmerged2"
-                  type="radio"
-                  name="kitchenmerged"
-                  value="value2"
-                />
-              </label>
-              <label for="kitchenmerged3">
-                <span>Skulle helst hatt to</span>
-                <input
-                  id="kitchenmerged3"
-                  type="radio"
-                  name="kitchenmerged"
-                  value="value3"
-                />
-              </label>
-            </fieldset>
-          </div>
-          <div class="input-wrapper range">
-            <label for="range1"> Hvor lenge vil du ha gjeld? </label>
-            <input type="range" id="range1" data-suffix=" år" />
-          </div>
-          <button type="submit">Finn ditt hjem</button>
-        </form>
-      </div>
-    </section>
-    <section id="response">
-      <div class="wrapper">
-        <div id="selected-response"></div>
-        <div class="response-list">
+    <div class="main">
+      <section id="intro">
+        <div class="wrapper">
+          <h1>Hjemme best</h1>
           <p>
-            I din situasjon tenker vi at du kan ha godt av å komme deg ut av
-            byen. Oslo er overvurdert uansett.
+            Svar på dette raske skjemaet for å finne ut akkurat hvor du kan bo
           </p>
-          <p>
-            Dette kan vi jobbe med, hva med et oppussingsprosjekt i et område
-            regulert for industri? Litt støy 24/7 venner du deg fort til.
-          </p>
-          <p>
-            Tror nok det er best du tar kontakt med de 15 beste vennene dine og
-            håper på at dere kan finne en løsning.
-          </p>
-          <p>
-            Du må da ha litt arv liggende et eller annet sted? Ta og gå igjennom
-            familietreet før du fyller ut skjemaet på nytt
-          </p>
-          <p>
-            Ha ha, veldig morsomt,
-            <button class="link-style" onclick="goTo(0)">Prøv igjen.</button>
-          </p>
-          <p>
-            Kanskje bolig ikke er helt din greie? Du kan finne mye fint
-            <a href="https://www.finn.no/mobility/search/car/mobilehome">her</a>
-          </p>
-          <p>
-            Vi har funnet den perfekte boligen til deg, det er bare 2 timer til
-            og fra jobb, og toget går ca. 40% av de gangene det sier det skal
-          </p>
-          <p>Ja deg vil vi ha! Velg og vrak!</p>
+          <button onclick="goTo(1)">Åpne skjema</button>
         </div>
-      </div>
-    </section>
-    <section id="form"></section>
+      </section>
+      <section id="form">
+        <div class="wrapper">
+          <form>
+            <fieldset class="input-wrapper horizontal">
+              <legend>Hvor mye plass ønsker du?</legend>
+              <label for="radio1">
+                <span>Nok til å ha besøk</span>
+                <input
+                  id="radio1"
+                  type="radio"
+                  name="group-space"
+                  value="small"
+                />
+              </label>
+              <label for="radio2">
+                <span>Nok til å ha barn</span>
+                <input
+                  id="radio2"
+                  type="radio"
+                  name="group-space"
+                  value="medium"
+                />
+              </label>
+              <label for="radio3">
+                <span>Nok til å ha pusterom</span>
+                <input
+                  id="radio3"
+                  type="radio"
+                  name="group-space"
+                  value="large"
+                />
+              </label>
+            </fieldset>
+            <fieldset class="input-wrapper grid-2">
+              <legend>Hvilke luksuser trenger du?</legend>
+              <label for="checkbox1">
+                <span>Muggfritt</span>
+                <input
+                  id="checkbox1"
+                  type="checkbox"
+                  name="group1"
+                  value="value1"
+                />
+              </label>
+              <label for="checkbox2">
+                <span>Vinkjøler</span>
+                <input
+                  id="checkbox2"
+                  type="checkbox"
+                  name="group2"
+                  value="value2"
+                />
+              </label>
+              <label for="checkbox3">
+                <span>Inngangsparti</span>
+                <input
+                  id="checkbox3"
+                  type="checkbox"
+                  name="group3"
+                  value="value3"
+                />
+              </label>
+              <label for="checkbox4">
+                <span>Uteområde</span>
+                <input
+                  id="checkbox4"
+                  type="checkbox"
+                  name="group4"
+                  value="value4"
+                />
+              </label>
+              <label for="checkbox5">
+                <span>Oppvaskmaskin</span>
+                <input
+                  id="checkbox5"
+                  type="checkbox"
+                  name="group5"
+                  value="value5"
+                />
+              </label>
+              <label for="checkbox6">
+                <span>God isolasjon</span>
+                <input
+                  id="checkbox6"
+                  type="checkbox"
+                  name="group6"
+                  value="value6"
+                />
+              </label>
+              <label for="checkbox7">
+                <span>Høyt under taket</span>
+                <input
+                  id="checkbox7"
+                  type="checkbox"
+                  name="group7"
+                  value="value7"
+                />
+              </label>
+            </fieldset>
+            <div class="input-wrapper range">
+              <label for="range1">
+                Hvor mye kommer foreldrene dine til å spytte inn?
+              </label>
+              <input min="0" max="20000000" type="range" id="range1" />
+            </div>
+            <div class="input-wrapper range">
+              <label for="range1">
+                Hvor mange kan du dele utgiftene med?
+              </label>
+              <input type="range" id="range1" />
+            </div>
+            <div class="input-wrapper range">
+              <label for="range1">
+                Vi kan godt eie en del av hjemmet ditt. Hvor mye trenger du
+                egentlig å eie?
+              </label>
+              <input type="range" id="range1" data-suffix="%" />
+            </div>
+            <div class="input-wrapper">
+              <fieldset class="input-wrapper grid-3">
+                <legend>
+                  De tenåringene, de har det fint med å bo på samme rom, ikke
+                  sant?
+                </legend>
+                <label for="teenagers1">
+                  <span>Jada</span>
+                  <input
+                    id="teenagers1"
+                    type="radio"
+                    name="teenagers"
+                    value="value1"
+                  />
+                </label>
+                <label for="teenagers2">
+                  <span>Hvis de må</span>
+                  <input
+                    id="teenagers2"
+                    type="radio"
+                    name="teenagers"
+                    value="value2"
+                  />
+                </label>
+                <label for="teenagers3">
+                  <span>Absolutt ikke</span>
+                  <input
+                    id="teenagers3"
+                    type="radio"
+                    name="teenagers"
+                    value="value3"
+                  />
+                </label>
+              </fieldset>
+            </div>
+            <div class="input-wrapper">
+              <fieldset class="input-wrapper grid-3">
+                <legend>
+                  Trenger du egentlig den stua? Et kjøkken er vel bra nok?
+                </legend>
+                <label for="kitchenmerged1">
+                  <span>Jada</span>
+                  <input
+                    id="kitchenmerged1"
+                    type="radio"
+                    name="kitchenmerged"
+                    value="value1"
+                  />
+                </label>
+                <label for="kitchenmerged2">
+                  <span>Ok...</span>
+                  <input
+                    id="kitchenmerged2"
+                    type="radio"
+                    name="kitchenmerged"
+                    value="value2"
+                  />
+                </label>
+                <label for="kitchenmerged3">
+                  <span>Skulle helst hatt to</span>
+                  <input
+                    id="kitchenmerged3"
+                    type="radio"
+                    name="kitchenmerged"
+                    value="value3"
+                  />
+                </label>
+              </fieldset>
+            </div>
+            <div class="input-wrapper range">
+              <label for="range1"> Hvor lenge vil du ha gjeld? </label>
+              <input type="range" id="range1" data-suffix=" år" />
+            </div>
+            <button type="submit">Finn ditt hjem</button>
+          </form>
+        </div>
+      </section>
+      <section id="response">
+        <div class="wrapper">
+          <div id="selected-response"></div>
+          <div class="response-list">
+            <p>
+              I din situasjon tenker vi at du kan ha godt av å komme deg ut av
+              byen. Oslo er overvurdert uansett.
+            </p>
+            <p>
+              Dette kan vi jobbe med, hva med et oppussingsprosjekt i et område
+              regulert for industri? Litt støy 24/7 venner du deg fort til.
+            </p>
+            <p>
+              Tror nok det er best du tar kontakt med de 15 beste vennene dine
+              og håper på at dere kan finne en løsning.
+            </p>
+            <p>
+              Du må da ha litt arv liggende et eller annet sted? Ta og gå
+              igjennom familietreet før du fyller ut skjemaet på nytt
+            </p>
+            <p>
+              Ha ha, veldig morsomt,
+              <button class="link-style" onclick="goTo(0)">Prøv igjen.</button>
+            </p>
+            <p>
+              Kanskje bolig ikke er helt din greie? Du kan finne mye fint
+              <a href="https://www.finn.no/mobility/search/car/mobilehome"
+                >her</a
+              >
+            </p>
+            <p>
+              Vi har funnet den perfekte boligen til deg, det er bare 2 timer
+              til og fra jobb, og toget går ca. 40% av de gangene det sier det
+              skal
+            </p>
+            <p>Ja deg vil vi ha! Velg og vrak!</p>
+          </div>
+        </div>
+      </section>
+    </div>
     <script src="scripts.js"></script>
   </body>
 </html>

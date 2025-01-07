@@ -116,6 +116,9 @@ section {
 }
 body {
   --offset-amount: 0%;
+  overflow: hidden;
+}
+.main {
   width: 1000vw;
   height: 100vh;
   overflow: hidden;
@@ -162,14 +165,16 @@ html {
   background-color: var(--bg-main);
   overscroll-behavior: none;
   background-blend-mode: multiply;
+  overflow: hidden;
 }
 
 section {
-  --section-padding: 1rem;
-  height: 100vh;
+  --section-padding-x: 1rem;
+  --section-padding-y: 4rem;
+  height: calc(100vh - var(--section-padding-y) * 2);
   overflow: scroll;
-  width: calc(100vw - var(--section-padding) * 2);
-  padding: 0 var(--section-padding);
+  width: calc(100vw - var(--section-padding-x) * 2);
+  padding: var(--section-padding-y) var(--section-padding-x);
   flex-shrink: 0;
   display: flex;
   flex-direction: column;

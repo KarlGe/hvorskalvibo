@@ -1,7 +1,7 @@
 function goTo(index) {
   console.log("Going to", index);
   document.getElementById('form').scrollTo(0, 0);
-  document.body.style.setProperty("--offset-amount", `-${index * 100}%`);
+  document.body.style.setProperty("--offset-amount", `-${index * 100}vw`);
 }
 
 function submitForm(event) {
@@ -14,7 +14,9 @@ form.addEventListener("submit", submitForm, true);
 
 const responses = document.querySelectorAll("#response p");
 const visibleResponse = responses[Math.floor(Math.random() * responses.length)];
-visibleResponse.classList.add("response-selected");
+const selectedContainer = document.getElementById("selected-response");
+visibleResponse.classList.add("selected-response");
+selectedContainer.appendChild(visibleResponse.cloneNode(true));
 
 const rangeInputs = document.querySelectorAll('input[type="range"]');
 rangeInputs.forEach((rangeInput) => {

@@ -29,7 +29,7 @@
                   id="radio1"
                   type="radio"
                   name="group-space"
-                  value="small"
+                  value="0"
                 />
               </label>
               <label for="radio2">
@@ -38,7 +38,7 @@
                   id="radio2"
                   type="radio"
                   name="group-space"
-                  value="medium"
+                  value="10"
                 />
               </label>
               <label for="radio3">
@@ -47,7 +47,7 @@
                   id="radio3"
                   type="radio"
                   name="group-space"
-                  value="large"
+                  value="20"
                 />
               </label>
             </fieldset>
@@ -58,8 +58,8 @@
                 <input
                   id="checkbox1"
                   type="checkbox"
-                  name="group1"
-                  value="value1"
+                  name="luxuries_moldFree"
+                  value="20"
                 />
               </label>
               <label for="checkbox2">
@@ -67,8 +67,8 @@
                 <input
                   id="checkbox2"
                   type="checkbox"
-                  name="group2"
-                  value="value2"
+                  name="luxuries_wineCooler"
+                  value="20"
                 />
               </label>
               <label for="checkbox3">
@@ -76,8 +76,8 @@
                 <input
                   id="checkbox3"
                   type="checkbox"
-                  name="group3"
-                  value="value3"
+                  name="luxuries_entrance"
+                  value="40"
                 />
               </label>
               <label for="checkbox4">
@@ -85,8 +85,8 @@
                 <input
                   id="checkbox4"
                   type="checkbox"
-                  name="group4"
-                  value="value4"
+                  name="luxuries_outsideSpace"
+                  value="40"
                 />
               </label>
               <label for="checkbox5">
@@ -94,8 +94,8 @@
                 <input
                   id="checkbox5"
                   type="checkbox"
-                  name="group5"
-                  value="value5"
+                  name="luxuries_dishWasher"
+                  value="40"
                 />
               </label>
               <label for="checkbox6">
@@ -103,8 +103,8 @@
                 <input
                   id="checkbox6"
                   type="checkbox"
-                  name="group6"
-                  value="value6"
+                  name="luxuries_insulation"
+                  value="40"
                 />
               </label>
               <label for="checkbox7">
@@ -112,8 +112,8 @@
                 <input
                   id="checkbox7"
                   type="checkbox"
-                  name="group7"
-                  value="value7"
+                  name="luxuries_highCeiling"
+                  value="40"
                 />
               </label>
             </fieldset>
@@ -121,20 +121,20 @@
               <label for="range1">
                 Hvor mye kommer foreldrene dine til å spytte inn?
               </label>
-              <input min="0" max="20000000" type="range" id="range1" />
+              <input name="parentFunding" min="0" max="20000000" type="range" id="range1" />
             </div>
             <div class="input-wrapper range">
               <label for="range1">
                 Hvor mange kan du dele utgiftene med?
               </label>
-              <input type="range" id="range1" />
+              <input name="shareExpenses" type="range" id="range1" />
             </div>
             <div class="input-wrapper range">
               <label for="range1">
                 Vi kan godt eie en del av hjemmet ditt. Hvor mye trenger du
                 egentlig å eie?
               </label>
-              <input type="range" id="range1" data-suffix="%" />
+              <input name="ownPercentage" type="range" id="range1" data-suffix="%" />
             </div>
             <div class="input-wrapper">
               <fieldset class="input-wrapper grid-3">
@@ -147,8 +147,8 @@
                   <input
                     id="teenagers1"
                     type="radio"
-                    name="teenagers"
-                    value="value1"
+                    name="teenagersShareRoom"
+                    value="0"
                   />
                 </label>
                 <label for="teenagers2">
@@ -156,8 +156,8 @@
                   <input
                     id="teenagers2"
                     type="radio"
-                    name="teenagers"
-                    value="value2"
+                    name="teenagersShareRoom"
+                    value="10"
                   />
                 </label>
                 <label for="teenagers3">
@@ -165,8 +165,8 @@
                   <input
                     id="teenagers3"
                     type="radio"
-                    name="teenagers"
-                    value="value3"
+                    name="teenagersShareRoom"
+                    value="50"
                   />
                 </label>
               </fieldset>
@@ -182,7 +182,7 @@
                     id="kitchenmerged1"
                     type="radio"
                     name="kitchenmerged"
-                    value="value1"
+                    value="0"
                   />
                 </label>
                 <label for="kitchenmerged2">
@@ -191,7 +191,7 @@
                     id="kitchenmerged2"
                     type="radio"
                     name="kitchenmerged"
-                    value="value2"
+                    value="10"
                   />
                 </label>
                 <label for="kitchenmerged3">
@@ -200,14 +200,14 @@
                     id="kitchenmerged3"
                     type="radio"
                     name="kitchenmerged"
-                    value="value3"
+                    value="50"
                   />
                 </label>
               </fieldset>
             </div>
             <div class="input-wrapper range">
               <label for="range1"> Hvor lenge vil du ha gjeld? </label>
-              <input type="range" id="range1" data-suffix=" år" />
+              <input name="debtYears" type="range" id="range1" data-suffix=" år" />
             </div>
             <button type="submit">Finn ditt hjem</button>
           </form>
@@ -215,40 +215,10 @@
       </section>
       <section id="response">
         <div class="wrapper">
-          <div id="selected-response"></div>
-          <div class="response-list">
+          <div id="selected-response">
             <p>
-              I din situasjon tenker vi at du kan ha godt av å komme deg ut av
-              byen. Oslo er overvurdert uansett.
             </p>
-            <p>
-              Dette kan vi jobbe med, hva med et oppussingsprosjekt i et område
-              regulert for industri? Litt støy 24/7 venner du deg fort til.
-            </p>
-            <p>
-              Tror nok det er best du tar kontakt med de 15 beste vennene dine
-              og håper på at dere kan finne en løsning.
-            </p>
-            <p>
-              Du må da ha litt arv liggende et eller annet sted? Ta og gå
-              igjennom familietreet før du fyller ut skjemaet på nytt
-            </p>
-            <p>
-              Ha ha, veldig morsomt,
-              <button class="link-style" onclick="goTo(0)">Prøv igjen.</button>
-            </p>
-            <p>
-              Kanskje bolig ikke er helt din greie? Du kan finne mye fint
-              <a href="https://www.finn.no/mobility/search/car/mobilehome"
-                >her</a
-              >
-            </p>
-            <p>
-              Vi har funnet den perfekte boligen til deg, det er bare 2 timer
-              til og fra jobb, og toget går ca. 40% av de gangene det sier det
-              skal
-            </p>
-            <p>Ja deg vil vi ha! Velg og vrak!</p>
+          </div>
           </div>
         </div>
       </section>

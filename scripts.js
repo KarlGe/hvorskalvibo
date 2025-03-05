@@ -37,6 +37,11 @@ const responses = [
   {
     range: [150, 300],
     message:
+      "Se deg rundt, kanskje det er noen du kan flytte inn med?",
+  },
+  {
+    range: [150, 300],
+    message:
       "Du må da ha litt arv liggende et eller annet sted? Ta og gå igjennom familietreet før du fyller ut skjemaet på nytt",
   },
   {

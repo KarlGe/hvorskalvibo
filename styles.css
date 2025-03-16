@@ -101,7 +101,7 @@ html {
 
 section {
   --section-padding-x: 1rem;
-  --section-padding-y: 4rem;
+  --section-padding-y: 1rem;
   height: calc(100vh - var(--section-padding-y) * 2);
   overflow: scroll;
   width: calc(100vw - var(--section-padding-x) * 2);
@@ -181,7 +181,6 @@ form {
   justify-content: flex-end;
   gap: 2rem;
   padding-right: 0;
-  margin-bottom: -7rem;
 }
 #form-nav button {
   margin: 0;
@@ -337,6 +336,9 @@ label:has(input[type="checkbox"]:checked)::after {
   display: none;
 }
 @media (min-width: 600px) {
+  section {
+    --section-padding-y: 4rem;
+  }
   .wrapper,
   #form-nav {
     width: 500px;

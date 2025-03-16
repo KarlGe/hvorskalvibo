@@ -112,9 +112,8 @@ section {
 }
 .wrapper,
 #form-nav {
-  width: 500px;
   padding: 2rem;
-  margin: auto;
+  margin: auto 0;
 }
 .wrapper {
   border-left: 7px solid var(--accent2);
@@ -182,6 +181,7 @@ form {
   justify-content: flex-end;
   gap: 2rem;
   padding-right: 0;
+  margin-bottom: -7rem;
 }
 #form-nav button {
   margin: 0;
@@ -337,6 +337,11 @@ label:has(input[type="checkbox"]:checked)::after {
   display: none;
 }
 @media (min-width: 600px) {
+  .wrapper,
+  #form-nav {
+    width: 500px;
+    margin: auto;
+  }
   .input-wrapper.horizontal {
     flex-direction: row;
   }

@@ -13,6 +13,31 @@
   font-weight: 700;
   src: url("./assets/Inter/Inter_18pt-Bold.ttf");
 }
+button.chevron {
+  width: 3.125rem;
+}
+.chevron::before {
+  border-style: solid;
+  border-width: 0.25em 0.25em 0 0;
+  content: "";
+  display: inline-block;
+  height: 0.45em;
+  left: 0.15em;
+  position: relative;
+  top: 0.25em;
+  transform: rotate(-45deg);
+  vertical-align: top;
+  width: 0.45em;
+}
+
+.chevron.right:before {
+  left: -0.125em;
+  transform: rotate(45deg);
+}
+
+.chevron.left:before {
+  transform: rotate(-135deg);
+}
 html,
 body,
 div,
@@ -85,10 +110,13 @@ section {
   display: flex;
   flex-direction: column;
 }
-.wrapper {
-  max-width: 500px;
+.wrapper,
+#form-nav {
+  width: 500px;
   padding: 2rem;
   margin: auto;
+}
+.wrapper {
   border-left: 7px solid var(--accent2);
   background-color: #fff;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
@@ -101,6 +129,9 @@ section {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+#intro button {
+  margin-top: 1rem;
 }
 h1 {
   text-align: center;
@@ -140,8 +171,31 @@ button:focus-visible {
 }
 form {
   display: flex;
+  margin: auto;
   flex-direction: column;
-  gap: 3rem;
+}
+.hidden {
+  display: none !important;
+}
+#form-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  padding-right: 0;
+}
+#form-nav button {
+  margin: 0;
+}
+button#submitButton {
+  background-color: var(--accent2);
+}
+#submitButton,
+form.question-first #prevButton,
+form.question-last #nextButton {
+  display: none;
+}
+form.question-last #submitButton {
+  display: block;
 }
 .input-wrapper {
   display: flex;
@@ -263,6 +317,12 @@ label:has(input[type="checkbox"]:checked)::after {
   border: none;
   box-shadow: none;
 }
+#selected-response .response-icon {
+  display: block;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
 #selected-response p {
   opacity: 1;
   font-size: 1.25rem;
@@ -271,6 +331,7 @@ label:has(input[type="checkbox"]:checked)::after {
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 1px;
   background-color: #fff;
+  max-width: unset;
 }
 .response-list {
   display: none;

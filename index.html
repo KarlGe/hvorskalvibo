@@ -19,36 +19,21 @@
         </div>
       </section>
       <section id="form">
-        <div class="wrapper">
-          <form>
+        <form>
+          <div id="questions" class="wrapper">
             <fieldset class="input-wrapper horizontal">
               <legend>Hvor mye plass ønsker du?</legend>
               <label for="radio1">
                 <span>Nok til å ha besøk</span>
-                <input
-                  id="radio1"
-                  type="radio"
-                  name="group-space"
-                  value="0"
-                />
+                <input id="radio1" type="radio" name="group-space" value="0" />
               </label>
               <label for="radio2">
                 <span>Nok til å ha barn</span>
-                <input
-                  id="radio2"
-                  type="radio"
-                  name="group-space"
-                  value="10"
-                />
+                <input id="radio2" type="radio" name="group-space" value="10" />
               </label>
               <label for="radio3">
                 <span>Nok til å ha pusterom</span>
-                <input
-                  id="radio3"
-                  type="radio"
-                  name="group-space"
-                  value="20"
-                />
+                <input id="radio3" type="radio" name="group-space" value="20" />
               </label>
             </fieldset>
             <fieldset class="input-wrapper grid-2">
@@ -121,7 +106,13 @@
               <label for="range1">
                 Hvor mye kommer foreldrene dine til å spytte inn?
               </label>
-              <input name="parentFunding" min="0" max="20000000" type="range" id="range1" />
+              <input
+                name="parentFunding"
+                min="0"
+                max="20000000"
+                type="range"
+                id="range1"
+              />
             </div>
             <div class="input-wrapper range">
               <label for="range1">
@@ -134,7 +125,12 @@
                 Vi kan godt eie en del av hjemmet ditt. Hvor mye trenger du
                 egentlig å eie?
               </label>
-              <input name="ownPercentage" type="range" id="range1" data-suffix="%" />
+              <input
+                name="ownPercentage"
+                type="range"
+                id="range1"
+                data-suffix="%"
+              />
             </div>
             <div class="input-wrapper">
               <fieldset class="input-wrapper grid-3">
@@ -207,19 +203,39 @@
             </div>
             <div class="input-wrapper range">
               <label for="range1"> Hvor lenge vil du ha gjeld? </label>
-              <input name="debtYears" type="range" id="range1" data-suffix=" år" />
+              <input
+                name="debtYears"
+                type="range"
+                id="range1"
+                data-suffix=" år"
+              />
             </div>
-            <button type="submit">Finn ditt hjem</button>
-          </form>
-        </div>
+          </div>
+          <div id="form-nav">
+            <button
+              aria-label="Forrige spørsmål"
+              id="prevButton"
+              class="chevron left"
+              type="button"
+              onclick="moveQuestion(-1)"
+            ></button>
+            <button
+              aria-label="Neste spørsmål"
+              id="nextButton"
+              class="chevron right"
+              type="button"
+              onclick="moveQuestion(1)"
+            ></button>
+            <button id="submitButton" type="submit">Finn ditt hjem</button>
+          </div>
+        </form>
       </section>
       <section id="response">
         <div class="wrapper">
           <div id="selected-response">
-            <p>
-            </p>
+            <p></p>
           </div>
-          </div>
+          <button onclick="restart()">Start på nytt</button>
         </div>
       </section>
     </div>

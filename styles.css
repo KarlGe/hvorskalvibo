@@ -210,6 +210,9 @@ form.question-last #submitButton {
   gap: 0.5rem;
 }
 #response .wrapper {
+  display: none;
+}
+#response.active .wrapper {
   display: flex;
   flex-direction: column;
   gap: 1rem;

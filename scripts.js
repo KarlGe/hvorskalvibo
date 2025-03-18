@@ -1,6 +1,7 @@
 const form = document.querySelector("form");
 form.addEventListener("submit", submitForm, true);
 
+const responseSection = document.getElementById("response");
 const questions = document.querySelectorAll("#questions > *");
 const hiddenClass = "hidden";
 
@@ -20,6 +21,11 @@ function moveQuestion(direction) {
 }
 
 function goTo(index) {
+  if (index === 2) {
+    responseSection.classList.add("active");
+  } else {
+    responseSection.classList.remove("active");
+  }
   console.log("Going to", index);
   document.getElementById("form").scrollTo(0, 0);
   moveQuestion(0);
